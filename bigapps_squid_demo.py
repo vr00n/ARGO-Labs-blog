@@ -31,7 +31,9 @@ def getAccel():
 	plt.savefig('overlay.png', transparent=True)
 # This is to superimpose ARGO's logo to the image. You will need to install Imagemagick to use the composite command
 	args=['composite -geometry +220+160 ARGO_LOGO_white_BK.png overlay.png overlay.png']
-# This is to run linux / unix commands from within a python script. Including shell=True ensures that you can run this as local user instead of root.This is a linux thing 
+# This is a linux thing subprocess allows you to run linux / unix commands from within a python script. 
+# Including shell=True ensures that you can run commands this as local user (preserves the envrionment variables)
+# otherwise uses root
 	subprocess.call(args,shell=True)
 	
 ​
@@ -47,17 +49,20 @@ def main():
 ​
         # continuously updates the overlayed layer and display stats
         overlay_renderer = None
+        #Infinite Loop
         while True:
-          getAccel()	
-		      img = Image.open("overlay.png")
-          pad = Image.new('RGB', (((img.size[0] + 31) // 32) * 32,((img.size[1] + 15) // 16) * 16,))	
-		      pad.paste(img, (0, 0)
-          if overlay_renderer:
-            # This line updates the overlay
-				    overlay_renderer.update(pad.tobytes())
-		      else:
-		        # This line generates the overlay
-            overlay_renderer = camera.add_overlay(pad.tobytes(),layer=3,size=img.size,alpha=75);
+        	#This is where the accelerometer graph gets drawn.
+        	getAccel()
+        	#These next 3 lines are from the picamera cookbook code. (See blog post for link)
+		img = Image.open("overlay.png")
+         	pad = Image.new('RGB', (((img.size[0] + 31) // 32) * 32,((img.size[1] + 15) // 16) * 16,))	
+		pad.paste(img, (0, 0)
+        	if overlay_renderer:
+            		# This line updates the overlay
+			overlay_renderer.update(pad.tobytes())
+		else:
+			# This line generates the overlay
+			overlay_renderer = camera.add_overlay(pad.tobytes(),layer=3,size=img.size,alpha=75);
 ​
 if __name__ == '__main__':
     import sys
