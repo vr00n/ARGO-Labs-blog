@@ -3,7 +3,7 @@
 ##NYT-comment-scrape.py for
 http://www.argolabs.org/blog-1/2016/2/14/machine-assisted-public-sentiment-analysis-on-nytimes-comments
 
-Usage: NYT-comment-scrape.py <URL of NYTIMES ARTICLE>
+Usage: NYT-comment-scrape.py URL of NYTIMES ARTICLE
 
 ###bigapps_squid_demo.py for  
 http://www.argolabs.org/blog-1/2015/12/13/argo-nyc-big-apps-2015
