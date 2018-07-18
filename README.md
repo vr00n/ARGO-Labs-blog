@@ -1,7 +1,7 @@
-# [ARGO Labs BLOG](www.argolabs.org/blog-1/)
+# [ARGO Labs BLOG](https://medium.com/a-r-g-o)
 
 
-## [Machine assisted sentiment analysis on NYTimes comments](http://www.argolabs.org/blog-1/2016/2/14/machine-assisted-public-sentiment-analysis-on-nytimes-comments)
+## [Machine assisted sentiment analysis on NYTimes comments](https://medium.com/a-r-g-o/machine-assisted-sentiment-analysis-on-nytimes-comments-8aaa343bd21d)
 
 Date: Feb-14,2016
 
@@ -9,13 +9,13 @@ Script: `NYT-comment-scrape.py URL of NYTIMES ARTICLE`
 
 
 
-## [ARGO @ NYC BIG APPS 2015](http://www.argolabs.org/blog-1/2015/12/13/argo-nyc-big-apps-2015)
+## [ARGO @ NYC BIG APPS 2015](https://medium.com/a-r-g-o/argo-nyc-big-apps-2015-7c565eec4c60)
 
 Date: Dec-13, 2015
 
 Script: `bigapps_squid_demo.py`
 
-You will need:
+Requirements:
 
  * stock raspberry pi + raspbian OS
  * HDMI cable to connect to a video output
@@ -23,7 +23,7 @@ You will need:
  * Install picamera, PIL, matplotlib and Imagemagick python modules to be able to use the script
 
 
-### [Using Google Street view and Camfind to programmatically detect fire hydrants](http://www.argolabs.org/blog-1/2015/1/27/using-google-street-view-and-camfind-to-programmatically-detect-fire-hydrants)
+### [Using Google Street view and Camfind to programmatically detect fire hydrants](https://medium.com/a-r-g-o/using-google-street-view-and-camfind-to-programmatically-detect-fire-hydrants-de143d7a6f0d)
 
 Date:  Feb-6, 2015
 
